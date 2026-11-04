@@ -1,0 +1,65 @@
+{
+  "name": "fluent-proto",
+  "version": "0.0.0-development",
+  "description": "Type-safe, declarative TypeScript builder for Protocol Buffer definitions that generates .proto files, Zod schemas, and TypeScript types.",
+  "license": "MIT",
+  "author": "Nazar Ilkiv",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ekscentrysytet/fluent-proto.git"
+  },
+  "homepage": "https://github.com/ekscentrysytet/fluent-proto#readme",
+  "bugs": {
+    "url": "https://github.com/ekscentrysytet/fluent-proto/issues"
+  },
+  "keywords": [
+    "protobuf",
+    "proto",
+    "grpc",
+    "zod",
+    "typescript",
+    "schema",
+    "validation",
+    "type-safe"
+  ],
+  "type": "commonjs",
+  "main": "dist/index.js",
+  "exports": {
+    ".": "./dist/index.js",
+    "./package.json": "./package.json"
+  },
+  "files": [
+    "dist",
+    "src"
+  ],
+  "publishConfig": {
+    "access": "public",
+    "provenance": true
+  },
+  "scripts": {
+    "typecheck": "tsc --noEmit",
+    "format": "prettier './{src,tests}/**/*.ts' --write --cache",
+    "format:check": "prettier './{src,tests}/**/*.ts' --check",
+    "build": "tsc -p tsconfig.build.json",
+    "prepublishOnly": "npm run build",
+    "test": "vitest run",
+    "prepare": "node .husky/install.mjs"
+  },
+  "devDependencies": {
+    "@semantic-release/changelog": "^7.0.0",
+    "@semantic-release/git": "^11.0.1",
+    "@tsconfig/node-lts": "^24.0.1",
+    "@types/node": "^24.19.2",
+    "conventional-changelog-conventionalcommits": "^9.3.1",
+    "husky": "^9.1.7",
+    "lint-staged": "^17.6.0",
+    "prettier": "^3.7.4",
+    "semantic-release": "^25.0.9",
+    "tsx": "^4.21.0",
+    "typescript": "^7.0.2",
+    "vitest": "^4.0.16"
+  },
+  "dependencies": {
+    "zod": "^4.1.13"
+  }
+}

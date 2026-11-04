@@ -1,0 +1,6 @@
+npx lint-staged
+npm run typecheck
+npm test
+build_dir=$(mktemp -d)
+trap 'rm -rf "$build_dir"' EXIT
+npx tsc -p tsconfig.build.json --outDir "$build_dir"

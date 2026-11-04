@@ -1,6 +1,6 @@
 {
   "name": "fluent-proto",
-  "version": "0.0.0-development",
+  "version": "1.0.0",
   "description": "Type-safe, declarative TypeScript builder for Protocol Buffer definitions that generates .proto files, Zod schemas, and TypeScript types.",
   "license": "MIT",
   "author": "Nazar Ilkiv",
